@@ -1,0 +1,587 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #243047;
+  background: #f6f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+a,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #aaa5ff;
+  outline-offset: 3px;
+}
+
+.app {
+  width: min(100% - 40px, 850px);
+  margin: 0 auto;
+  padding: 26px 0 36px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0 28px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #202b46;
+  text-decoration: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+}
+
+.brand-icon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 13px;
+  background: #5c5bd6;
+  color: white;
+  font-size: 23px;
+}
+
+.language-button {
+  padding: 10px 16px;
+  border: 1px solid #e2e5ef;
+  border-radius: 12px;
+  background: white;
+  color: #4c4ac1;
+  font-weight: 700;
+}
+
+.language-button:hover {
+  background: #f0efff;
+}
+
+.welcome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 205px;
+  padding: 34px 38px;
+  overflow: hidden;
+  border-radius: 25px;
+  background: linear-gradient(120deg, #5d5bd6, #8177e8);
+  color: white;
+  box-shadow: 0 14px 35px #5d5bd626;
+}
+
+.eyebrow {
+  display: block;
+  color: #888ca3;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.welcome .eyebrow {
+  color: #e1e0ff;
+}
+
+.welcome h1 {
+  margin: 15px 0 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(30px, 5vw, 43px);
+  font-weight: 800;
+  letter-spacing: -1.8px;
+}
+
+.welcome p {
+  margin: 0;
+  color: #eeedff;
+  font-size: 15px;
+}
+
+.sun-icon {
+  display: grid;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid #ffffff42;
+  border-radius: 30px;
+  background: #ffffff20;
+  font-size: 53px;
+  transform: rotate(8deg);
+}
+
+.progress-card {
+  margin-top: 23px;
+  padding: 26px 28px;
+  border: 1px solid #eaebf2;
+  border-radius: 21px;
+  background: white;
+}
+
+.progress-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.progress-heading h2 {
+  margin: 8px 0 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+
+.progress-percent {
+  color: #5d5bd6;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.progress-track {
+  height: 9px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #eeeff7;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #5d5bd6, #a49af5);
+  transition: width 250ms ease;
+}
+
+.routine-section {
+  margin-top: 36px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  margin: 8px 0 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.task-count {
+  padding: 7px 12px;
+  border-radius: 10px;
+  background: #eeedff;
+  color: #5d5bd6;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.task-list {
+  display: grid;
+  gap: 12px;
+}
+
+.task-card {
+  display: grid;
+  grid-template-columns: 90px 24px minmax(0, 1fr);
+  align-items: center;
+  gap: 17px;
+  padding: 20px;
+  border: 1px solid #eaebf2;
+  border-radius: 18px;
+  background: white;
+  transition: border-color 180ms ease, background 180ms ease;
+}
+
+.task-card:hover {
+  border-color: #cbc9ff;
+}
+
+.task-time {
+  color: #777d93;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.task-check {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border: 2px solid #d8dbea;
+  border-radius: 8px;
+  background: white;
+  color: white;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.is-done .task-check {
+  border-color: #5d5bd6;
+  background: #5d5bd6;
+}
+
+.task-content {
+  min-width: 0;
+}
+
+.task-content h3 {
+  margin: 0 0 5px;
+  color: #29334b;
+  font-size: 15px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.task-content p {
+  margin: 0;
+  color: #85899d;
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.is-done .task-content h3 {
+  color: #888ca0;
+  text-decoration: line-through;
+}
+
+.is-done {
+  background: #fcfcff;
+}
+
+/* Add Activity Form */
+.add-task-form {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 8px;
+  padding: 22px;
+  border: 1px solid #eaebf2;
+  border-radius: 18px;
+  background: white;
+}
+
+.add-task-form h3 {
+  margin: 0 0 6px;
+  color: #29334b;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 17px;
+}
+
+.add-task-form label,
+.edit-task-form label {
+  display: grid;
+  gap: 7px;
+  margin-top: 4px;
+  color: #626981;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.add-task-form input,
+.edit-task-form input {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #dfe2ed;
+  border-radius: 10px;
+  background: #fcfcff;
+  color: #29334b;
+  font-size: 14px;
+}
+
+.add-task-form input:focus,
+.edit-task-form input:focus {
+  border-color: #7773e5;
+  outline: none;
+  box-shadow: 0 0 0 3px #7773e51a;
+}
+
+.add-task-button {
+  min-height: 44px;
+  margin-top: 8px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 11px;
+  background: #5d5bd6;
+  color: white;
+  font-weight: 700;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.add-task-button:hover {
+  background: #4947bd;
+}
+
+.add-task-button:active {
+  transform: scale(0.99);
+}
+
+/* Edit Activity */
+.edit-task-form {
+  display: grid;
+  grid-column: 1 / -1;
+  gap: 10px;
+  width: 100%;
+  padding-top: 12px;
+}
+
+.edit-task-form input {
+  min-height: 40px;
+  padding: 9px 10px;
+  border-radius: 9px;
+}
+
+.edit-task-button,
+.delete-task-button {
+  padding: 9px 13px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.edit-task-button {
+  border: 1px solid #dcdafa;
+  background: #f0efff;
+  color: #514fc4;
+}
+
+.edit-task-button:hover {
+  background: #e3e1ff;
+}
+
+.delete-task-button {
+  border: 1px solid #f2d5d8;
+  background: #fff1f2;
+  color: #c43d50;
+}
+
+.delete-task-button:hover {
+  background: #ffe1e5;
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  grid-column: 1 / -1;
+}
+
+/* Daily Journal */
+.journal-section {
+  margin-top: 30px;
+  padding: 28px;
+  border: 1px solid #eee8ff;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 8px 24px rgba(83, 55, 150, 0.08);
+}
+
+.journal-date {
+  display: block;
+  margin-top: 8px;
+  color: #805ad5;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.journal-section h2 {
+  margin: 10px 0;
+  color: #30205f;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 24px;
+}
+
+.journal-section p {
+  color: #77718a;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.journal-input {
+  display: block;
+  width: 100%;
+  min-height: 120px;
+  margin-top: 18px;
+  padding: 16px;
+  border: 1px solid #ded5f7;
+  border-radius: 12px;
+  background: #fcfbff;
+  color: #30205f;
+  line-height: 1.6;
+  resize: vertical;
+  outline: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.journal-input:focus {
+  border-color: #805ad5;
+  box-shadow: 0 0 0 3px rgba(128, 90, 213, 0.12);
+}
+
+.journal-status {
+  display: block;
+  margin-top: 12px;
+  color: #77718a;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.clear-note-button {
+  margin-top: 16px;
+  padding: 10px 14px;
+  border: 1px solid #f2d5d8;
+  border-radius: 10px;
+  background: #fff1f2;
+  color: #c43d50;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.clear-note-button:hover {
+  background: #ffe1e5;
+}
+
+.footer {
+  padding: 35px 0 10px;
+  color: #9296a8;
+  text-align: center;
+  font-size: 12px;
+}
+
+.footer span {
+  color: #6260ca;
+  font-weight: 800;
+}
+
+.footer p {
+  margin-top: 8px;
+}
+
+/* Mobile Layout */
+@media (max-width: 540px) {
+  .app {
+    width: min(100% - 24px, 850px);
+    padding-top: 14px;
+  }
+
+  .topbar {
+    padding-bottom: 19px;
+  }
+
+  .brand {
+    font-size: 18px;
+  }
+
+  .welcome {
+    min-height: 175px;
+    padding: 26px 22px;
+    border-radius: 21px;
+  }
+
+  .sun-icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 20px;
+    font-size: 34px;
+  }
+
+  .welcome h1 {
+    letter-spacing: -1px;
+  }
+
+  .welcome p {
+    max-width: 220px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .progress-card {
+    padding: 22px;
+  }
+
+  .section-heading h2 {
+    font-size: 20px;
+  }
+
+  .task-card {
+    grid-template-columns: 68px 23px minmax(0, 1fr);
+    gap: 10px;
+    padding: 16px 12px;
+  }
+
+  .task-time {
+    font-size: 10px;
+  }
+
+  .task-content h3 {
+    font-size: 13px;
+  }
+
+  .task-content p {
+    font-size: 12px;
+  }
+
+  .task-actions {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .edit-task-form {
+    grid-column: 1 / -1;
+  }
+
+  .journal-section {
+    padding: 22px 18px;
+  }
+
+  .journal-section h2 {
+    font-size: 21px;
+  }
+
+  .add-task-form {
+    padding: 18px;
+  }
+}
